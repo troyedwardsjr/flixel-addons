@@ -223,7 +223,7 @@ class FlxTilemapExt extends FlxTilemap
 						}
 						
 						matrixToUse.translate(drawX, drawY);
-						Camera.drawPixels(frame, matrixToUse, colorTransform, blend);
+						Camera.drawPixels(frame, new flixel.graphics.FlxMaterial(), matrixToUse, colorTransform);
 					}
 				}
 				
@@ -248,7 +248,6 @@ class FlxTilemapExt extends FlxTilemap
 		{
 			if (isColored)
 				Buffer.colorTransform(colorTransform);
-			Buffer.blend = blend;
 		}
 		
 		Buffer.dirty = false;
